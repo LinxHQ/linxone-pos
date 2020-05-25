@@ -1,0 +1,191 @@
+ul {padding: 0;}
+.row {margin: 0;}
+li {list-style: none;}
+a:hover {text-decoration: none;}
+.container-fluid {padding: 0 !important;}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{background-color: #ccc !important;}
+.main .submain {text-align: center !important;}
+header {
+    background-color: #f9f9f9 !important; border-bottom: 1px solid #e2e2e2;}
+.active-members { background-color: #f9f9f9; padding: 10px; margin: 2px;}
+.active-members h3{margin-top: 8px;
+    margin-bottom: 5px;}
+.checkin1 { background-color: #f9f9f9; padding: 10px;  margin: 2px;}
+.checkin1 h3{margin-top: 8px;
+    margin-bottom: 5px;}
+.bookings1 { background-color: #f9f9f9; padding: 10px;  margin: 2px;}
+.bookings1 h3{margin-top: 8px;
+    margin-bottom: 5px;}
+.sidebar-left {border-right: 1px solid #e2e2e2; background-color: #f9f9f9;}
+.sidebar-left h2 {font-size: 16px;}
+.admin {text-align: right;}
+.overview  {margin: 0 auto;
+position: fixed;
+width: 96%;
+}
+.table-nho {    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #fff;
+width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;}
+.submain .glyphicon {font-size: 50px;
+    color: #00be67;
+    margin-top: 20px;}
+.submain h2 {    font-size: 35px !important;
+    margin-bottom: 30px;
+    color: #00be67; margin-top: 1px !important;}
+table .dautien {font-weight: bold;}
+.table {margin-top: 20px;}
+.sidebar-left .glyphicon {padding-right: 5px;}
+.check-in-out {    width: 40%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 30px;background-color: #f9f9f9;
+}
+.booking1 h4{text-align: right;}
+.booking1 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{border-top: 0px solid #ddd;}
+.modal-lg {width: 500px;}
+.form-control.new {width: 35%;
+    margin: 0 auto;
+    display:inline;}
+.panel-group.new {    float: left;
+    margin-left: 5px;}
+.seach-tong{
+   float: left;
+    text-align: center;
+    width: 100%;
+}
+.grid-view .summary{
+    text-align: left;
+}
+.total {width: 50%;  float: right;}
+.custommer2.invoice {text-align: right; margin-bottom: 20px}
+.custommer.invoice {text-align: left;}
+.custommer.invoice span {color:#00be67; font-size: 16px; }
+.custommer2.invoice table p {font-weight: bold;}
+.dautien.invoice {background: #5bb75b;color: #fff}
+.buton-check.btn.btn-success h4{
+color: #fff;
+font-size: 24px;}
+.buton-check.btn.btn-success{
+font-size: 24px;
+margin-bottom: 10px;}
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+.fc-center h2{font-size: 20px !important;}
+/*.sidebar-left  h2:after{*/
+/*display: block;*/
+/*content: " ";*/
+/*width: 100%;*/
+/*height: 6px;*/
+/*border-top: 2px solid #ddd;*/
+/*margin-top: -10px;}*/
+.submain.col-lg-9.col-md-9.col-xs-12.col-sm-12 div .container
+{
+    width:100%;
+    /*margin-top:69px;*/
+}
+
+.table {
+    margin-top: 20px;
+}
+.table {
+    margin-bottom: 20px;
+    max-width: 100%;
+    width: 100%;
+}
+table {
+    background-color: transparent;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    border-top: 1px solid #ddd;
+    line-height: 1.42857;
+    padding: 8px;
+    vertical-align: top;
+}
+td, th {
+    padding: 0;
+}
+.submain .glyphicon 
+{
+    font-size: 20px; 
+    /*margin-left: 10px;*/ 
+    margin-top: 0px;
+}
+.table.table-striped.table-bordered
+{
+    border: none;
+}
+.table.table-striped.table-bordered tr td
+{
+    border-left:  none;
+    border-right:  none;
+    text-align: left;
+}
+.table.table-striped.table-bordered thead tr th
+{
+    border-left:  none;
+    border-right:  none;
+}
+.table.table-striped.table-bordered thead tr th a
+{
+    color: #000;
+}
+/*body
+{
+    font-size: 12pt;
+}*/
+
+.park-header .glyphicon {
+    color: #00be67;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.table.table-striped.table-bordered thead tr th
+{
+    text-align: left;
+}
+
+.img_search
+{
+    width: 40px;cursor:pointer;
+}
+.management{
+    margin-top: 45px;
+}
+#modal-select .modal-dialog.modal-lg .modal-content
+{
+    min-width: 100%;
+    min-height: 600px;
+}
+#modal-select .modal-dialog.modal-lg .modal-body
+{
+    width: 80%;
+}
+
+td .ui-widget-content div
+{
+    height: 70px;
+}
+.void{
+    background: #f8b9b7;
+}
+
+.pdf_head_sogan{
+    text-align: right;
+    font-size: 20px;
+}
+.table-nho tr td{
+    border-bottom: 1px solid #666;
+    padding: 3px;
+}

@@ -1,0 +1,977 @@
+ul {padding: 0;}
+.row {margin: 0;}
+li {list-style: none;}
+a:hover {text-decoration: none;}
+.container-fluid {padding: 0 !important;}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{background-color: #ccc !important;}
+.main .submain {text-align: center !important;}
+header {
+    background-color: #f9f9f9 !important; border-bottom: 1px solid #e2e2e2;}
+.active-members { background-color: #f9f9f9; padding: 10px; margin: 2px;}
+.active-members h3{margin-top: 8px;
+    margin-bottom: 5px;}
+.checkin1 { background-color: #f9f9f9; padding: 10px;  margin: 2px;}
+.checkin1 h3{margin-top: 8px;
+    margin-bottom: 5px;}
+.bookings1 { background-color: #f9f9f9; padding: 10px;  margin: 2px;}
+.bookings1 h3{margin-top: 8px;
+    margin-bottom: 5px;}
+.sidebar-left {border-right: 1px solid #e2e2e2; background-color: #f9f9f9;}
+.sidebar-left h2 {font-size: 16px;}
+.admin {text-align: right;}
+.overview  {margin: 0 auto;
+position: fixed;
+width: 96%;
+}
+.table-nho {    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #fff;
+width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;}
+.submain .glyphicon {font-size: 50px;
+    color: #00be67;
+    margin-top: 20px;}
+.submain h2 {    font-size: 35px !important;
+    margin-bottom: 30px;
+    color: #00be67; margin-top: 1px !important;}
+table .dautien {font-weight: bold;}
+.table {margin-top: 20px;}
+.sidebar-left .glyphicon {padding-right: 5px;}
+.check-in-out {    width: 40%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 30px;background-color: #f9f9f9;
+}
+.booking1 h4{text-align: right;}
+.booking1 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{border-top: 0px solid #ddd;}
+.modal-lg {width: 500px;}
+.form-control.new {width: 35%;
+    margin: 0 auto;
+    display:inline;}
+.panel-group.new {    float: left;
+    margin-left: 5px;}
+.seach-tong{
+   float: left;
+    text-align: center;
+    width: 100%;
+}
+.grid-view .summary{
+    text-align: left;
+}
+.total {width: 50%;  float: right;}
+.custommer2.invoice {text-align: right; margin-bottom: 20px}
+.custommer.invoice {text-align: left;}
+.custommer.invoice span {color:#00be67; font-size: 16px; }
+.custommer2.invoice table p {font-weight: bold;}
+.dautien.invoice {background: #5bb75b;color: #fff}
+.buton-check.btn.btn-success h4{
+color: #fff;
+font-size: 24px;}
+.buton-check.btn.btn-success{
+font-size: 24px;
+margin-bottom: 10px;}
+#calendar {
+    max-width: 100%;
+    margin: 0 auto;
+
+}
+.fc-center h2{font-size: 20px !important;}
+/*.sidebar-left  h2:after{*/
+/*display: block;*/
+/*content: " ";*/
+/*width: 100%;*/
+/*height: 6px;*/
+/*border-top: 2px solid #ddd;*/
+/*margin-top: -10px;}*/
+.submain.col-lg-9.col-md-9.col-xs-12.col-sm-12 div .container
+{
+    width:100%;
+    /*margin-top:69px;*/
+}
+
+.table {
+    margin-top: 20px;
+}
+.table {
+    margin-bottom: 20px;
+    max-width: 100%;
+    width: 100%;
+}
+table {
+    background-color: transparent;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    border-top: 1px solid #ddd;
+    line-height: 1.42857;
+    padding: 8px;
+    vertical-align: top;
+}
+td, th {
+    padding: 0;
+}
+.submain .glyphicon 
+{
+    font-size: 20px; 
+    /*margin-left: 10px;*/ 
+    margin-top: 0px;
+}
+.table.table-striped.table-bordered
+{
+    border: none;
+}
+.table.table-striped.table-bordered tr td
+{
+    border-left:  none;
+    border-right:  none;
+    text-align: left;
+}
+.table.table-striped.table-bordered thead tr th
+{
+    border-left:  none;
+    border-right:  none;
+}
+.table.table-striped.table-bordered thead tr th a
+{
+    color: #000;
+}
+/*body
+{
+    font-size: 12pt;
+}*/
+
+.park-header .glyphicon {
+    color: #00be67;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.table.table-striped.table-bordered thead tr th
+{
+    text-align: left;
+}
+
+.img_search
+{
+    width: 40px;cursor:pointer;
+}
+.management{
+    margin-top: 45px;
+}
+#modal-select .modal-dialog.modal-lg .modal-content
+{
+    min-width: 100%;
+    min-height: 600px;
+}
+#modal-select .modal-dialog.modal-lg .modal-body
+{
+    width: 80%;
+    
+}
+
+td .ui-widget-content div
+{
+    height: 70px;
+}
+.void{
+    background: #f8b9b7;
+}
+
+.pdf_head_sogan{
+    text-align: right;
+    font-size: 20px;
+}
+.table-nho tr td{
+    border-bottom: 1px solid #666;
+    padding: 3px;
+}
+.container{
+    width: 100%;
+    padding: 0;
+    margin-top: -20px;
+}
+.summary{
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    height: 60px;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+.pagination{
+    margin: 20px;
+    float: right;
+}
+.parkclub-rectangle-content{
+    overflow: hidden;
+}
+.parkclub-popup {
+    background-color: #fff;
+    padding-bottom: 30px;
+    text-align: center;
+    width: 700px;
+    height: auto;
+}
+.parkclub-popup table{
+    text-align: left;
+}
+.parkclub-rectangle-content table th{
+    text-align: left;
+}
+.parkclub-rectangle-content table th a{
+    color: #445260;
+    font-size: 16px;
+    font-weight: 500;
+}
+.parkclub-newm-left button{
+    margin-left: 0;
+}
+label {
+    display: inline-block;
+    font-weight: inherit;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+.parkclub-new-member .input-group.date{
+    margin-bottom: 8px;
+    width: 95%;
+}
+.parkclub-new-member .input-group.date .krajee-datepicker{
+    width: 96%;
+}
+.input-group-addon{
+    background-color: #32cd8b;
+}
+.input-group.date .glyphicon{
+    color: #fefefe;
+}
+.parkclub-newm-right-footer button{
+    margin-top: 15px;
+}
+.parkclub-new-member-wap{
+    width: calc(100% - 300px); float: left;
+}
+.parkclub-wrapper.parkclub-new-member{
+    width:100%;
+}
+.parkclub-newm-right-footer {
+    border-top: 0;
+    margin-top: 0px;
+    overflow: hidden;
+    width: 100%;
+}
+.parkclub-newm-left-title{
+    border-bottom: 1px solid #dddddd;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 10px 10px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat",sans-serif;
+    overflow: hidden;
+}
+.red{
+    color: red;
+}
+.parkclub-newm-left{
+    min-height: 1000px;
+}
+.parkclub-newm-right{
+    min-height: 1000px;
+}
+.parkclub-table .td-left{
+    width: 15%;
+}
+.parkclub-table .td-right{
+    width: 35%;
+}
+
+.parkclub-footer{
+    border-top: 1px solid #ccc;
+    margin-top: 0px;
+    padding: 15px;
+    text-align: right;
+}
+.parkclub-header-left{
+    width: 40%;
+    float: left;
+    padding: 6px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+.parkclub-header-right{
+    width: 60%;
+    float: left;
+    text-align: right;
+    padding: 6px;
+}
+.parkclub-rectangle-content table th{
+    font-size: 14px;
+}
+.parkclub-menu nav ul li a, .parkclub-check-table tr td{
+    font-size: 14px;
+}
+.parkclub-nameplate{
+    margin-top: 15px;
+}
+.parkclub-subtop-bar{
+    height: 115px;
+}
+.parkclub-menu,.parkclub-logo{
+    width: 50px;
+}
+.parkclub-menu nav ul li img{
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.parkclub-subtop-bar,.parkclub-wrapper,.parkclub-new-member-wap{
+    width: calc(100% - 250px);
+    padding-top: 10px;
+}
+.parkclub-nav{
+    width: calc(100% - 250px);
+    padding-top: 10px;
+}
+.parkclub-rectangle{
+    margin: 30px auto 0;
+}
+.parkclub-rectangle-header-left {
+    display: inline-block;
+    margin-top: 17px;
+    margin-right: 5px;
+    margin-bottom: 17px;
+    margin-left: 20px;
+    font-size: 16px
+}
+.parkclub-rectangle-header-right {
+    display: inline-block;
+    float: right;
+    margin: 13px 20px;
+}
+.parkclub-rectangle-header{
+    height: 60px;
+}
+.parkclub-rectangle-content table th{
+    padding: 0px 6px 5px 20px;
+}
+.white{
+    color: #ffffff;
+}
+.parkclub-nameplate .glyphicon{
+    font-size: 22px;
+}
+input {
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    color: #3a3a3a;
+    font-size: 14px;
+    height: 35px;
+    margin-bottom: 10px;
+    padding-left: 12px;
+width: 100%;
+}
+td, th {
+    padding-left: 10px;
+    padding-left: 10px;
+}
+.view-info td{
+    border-bottom: 1px solid #d3d3d3;
+    height: 55px;
+}
+.view-info .form-group{
+    margin-bottom: 0;
+    margin-top: 6px;
+}
+.view-info .help-block{
+    margin-bottom:0;
+}
+.custommer2.invoice {
+    margin-bottom: 80px;
+    text-align: right;
+}
+.parkclub-header-left i{
+    top: 3px;
+    color: #333;
+    font-size: 22px;
+    margin-right: 5px;
+}
+.parkclub-header-left{
+    color: #5bb75b;
+}
+.parkclub-rectangle-content table tr td {
+    color: #445260;
+    padding: 5px 6px 5px 20px;
+}
+select.form-control{
+    -moz-appearance: none;
+    background: #ffffff url("img/angle-down.png") no-repeat scroll 100% 0;
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    height: 40px;
+    margin-bottom: 10px;
+/*    margin-left: 5%;*/
+    text-indent: 0px;
+    width: 100%;
+}
+.parkclub-newm fieldset input{
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    color: #3a3a3a;
+    font-size: 14px;
+    height: 35px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    text-indent: 10px;
+    width: 90%;
+}
+.parkclub-newm fieldset label{
+    color: #676767;
+    font-size: 14px;
+    margin-left: 7%;
+}
+.parkclub-newm fieldset input{
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    color: #3a3a3a;
+    font-size: 14px;
+    height: 35px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    text-indent: 10px;
+    width: 90%;
+}
+.parkclub-newm fieldset input[type="radio"] {
+    display: none;
+}
+.parkclub-newm fieldset .help-block{
+    margin-left: 5%;
+}
+.parkclub-newm fieldset .form-group textarea{
+    margin-left: 5%;
+    width: 90%;
+}
+.parkclub-newm fieldset .parkclub-switch{
+    left: 130px;
+}
+.parkclub-newm fieldset .parkclub-radio{
+    margin-top: 40px;
+}
+/*select{
+    margin-left: 0;
+}*/
+.btn-small{
+    font-size: 12px;
+    padding: 4px 8px;
+    position: relative;
+    top: -5px;
+}
+.error{
+    color: red;
+}
+.parkclub-newm select.form-control{
+    margin-left: 5%;
+    width: 90%;
+}
+select.form-control.select-none{
+    -moz-appearance: meterchunk;
+    background: #ffffff;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    -webkit-appearance: menulist-button;
+}
+table .input-group.date{
+    margin-bottom: 10px;
+}
+.parkclub-newm .input-group.date{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+}
+.parkclub-newm .input-group.date input{
+    margin-left:0;
+}
+.book-facility-search{
+    padding: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+.book-facility-search .book-label{
+    font-weight: 500;
+    margin-right: 10px;
+    position: relative;
+}
+/*.book-facility-search select{
+    width: 80%;
+}*/
+.booking1.row{
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.booking1.row h4{
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+.booking1.row .table{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.modal-body{
+    padding: 0px;
+}
+.fc-center h2{
+    margin-bottom: 0px;
+}
+.parkclub-search input{
+    margin-bottom:0;
+}
+.parkclub-logo h1{
+    margin-top: 25px;
+}
+.parkclub-rectangle-header-left h3{
+    margin: 0;
+    color: #32cd8b;
+    display: inline;
+    margin-right: 10px;
+}
+.kv-strength-container{
+    width: 95%;
+}
+.kv-strength-container .kv-toggle{
+    height: 10px;
+    margin: 0;
+    padding: 0;
+}
+#user-password{
+    width: 95%;
+}
+.view_picture{
+    text-align: center;
+}
+.modal {
+    z-index: 1040;
+}
+.tour-highlight{
+  box-shadow: 3px 3px 15px #666;
+  border-color:#C76C0C;
+  background: #C76C0C;
+  color: #fff;
+  cursor: pointer;
+  
+  /*Opacity*/
+  zoom: 1;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+div.parkclub-subtop-bar div.parkclub-search button.parkclub-searchbtn.search-1{
+    right: 20px;
+}
+.modal-backdrop{
+    z-index: 1038;
+}
+form label.required:after {
+  content:" * ";
+  color:red;
+}
+.parkclub-newm-error{
+    margin-left: 20px;
+}
+form div.required label.control-label:after,.form-group.field-installform-verifycode label.control-label:after {
+  content:" * ";
+  color:red;
+}
+.nav-title{
+    background: #eee none repeat scroll 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    padding: 10px;
+}
+.parckclub-active {
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(50, 206, 138, 0.4) 0%, rgba(50, 206, 138, 0) 80%) repeat scroll 0 0;
+}
+li.parckclub-active.tour-step-backdrop.tour-tour-element {
+    background: #495764 none repeat scroll 0 0;
+}
+.parkclub-menu .tour-step-backdrop.tour-tour-element {
+    background: #495764 none repeat scroll 0 0;
+}
+#update_view{
+    margin-left: 5%;
+    width: 90%;
+}
+.bs-example-bg-classes p{
+    padding: 15px;
+}
+.park_new_margin{
+    width: 90%;
+    margin-left: 5%;
+}
+.error-summary{
+    color: #dd1144;
+}
+tfoot {
+    background: #f1f1f1 none repeat scroll 0 0;
+}
+.error-form{
+    padding-left: 5%;
+    color: #dd1144;
+}
+table tr td a.btn{
+    color: #FFFFFF;
+}
+.disable{
+    display: none;
+}
+.parkclub-menu nav ul li a{
+    width: 100%;
+    padding: 15px;
+    margin-left: 0px;
+}
+
+#report-items li a {
+	padding: 15px 15px 15px 30px;
+}
+.parkclub-menu nav ul li{
+    padding: 0px;
+}
+.scroll-report {
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: block;
+    position: relative;
+}
+
+.scroll-report thead{
+    display: block;
+}
+.scroll-report tbody{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 550px;
+}
+.scroll-report th, .scroll-report td  {
+    min-width: 100px;
+    overflow-wrap: normal;
+    word-wrap: break-word;
+    max-width:100px;
+
+}
+
+.error-form{
+    padding-left: 5%;
+    color: #dd1144;
+}
+table tr td a.btn{
+    color: #FFFFFF;
+}
+.disable{
+    display: none;
+}
+.scroll-height {
+    border-collapse: collapse;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+
+.scroll-height thead, .scroll-height tbody{
+    
+}
+.scroll-height tbody{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 550px;
+}
+.scroll-height thead{
+    
+}
+
+.parkclub-menu a{
+color: #fff !important; 
+}
+.parkclub-menu nav ul li img{
+    margin-right:20px;
+}
+.parkclub-rectangle-content table th a{
+    font-size: 14px;
+}
+.label-font-normal{
+    font-size: 13px;
+    padding: 0.4em .8em .3em;
+}
+.select-width-90{
+    width: 90%;
+}
+select.error, textarea.error, input.error {
+    background:#F9C19D;
+    color: #000;
+}
+.label{
+    font-size: 85%;
+}
+input[type="radio"],input[type="checkbox"]{
+    height: auto;
+    width: auto;
+}
+
+.cssload-loader{
+	display:block;
+	position:absolute;
+	height:4em;width:4em;
+	left:50%;
+	margin-top:-2em;
+	margin-left:-2em;
+	background-color:rgb(51,136,153);
+	border-radius:2.5em 2.5em 2.5em 2.5em;
+		-o-border-radius:2.5em 2.5em 2.5em 2.5em;
+		-ms-border-radius:2.5em 2.5em 2.5em 2.5em;
+		-webkit-border-radius:2.5em 2.5em 2.5em 2.5em;
+		-moz-border-radius:2.5em 2.5em 2.5em 2.5em;
+	box-shadow:inset 0 0 0 0.5em rgb(236,234,224);
+		-o-box-shadow:inset 0 0 0 0.5em rgb(236,234,224);
+		-ms-box-shadow:inset 0 0 0 0.5em rgb(236,234,224);
+		-webkit-box-shadow:inset 0 0 0 0.5em rgb(236,234,224);
+		-moz-box-shadow:inset 0 0 0 0.5em rgb(236,234,224);
+	background: linear-gradient(-45deg, rgb(0,153,0), rgb(0,153,0) 50%, rgb(204,204,0) 50%, rgb(204,204,0));
+		background: -o-linear-gradient(-45deg, rgb(0,153,0), rgb(0,153,0) 50%, rgb(204,204,0) 50%, rgb(204,204,0));
+		background: -ms-linear-gradient(-45deg, rgb(0,153,0), rgb(0,153,0) 50%, rgb(204,204,0) 50%, rgb(204,204,0));
+		background: -webkit-linear-gradient(-45deg, rgb(0,153,0), rgb(0,153,0) 50%, rgb(204,204,0) 50%, rgb(204,204,0));
+		background: -moz-linear-gradient(-45deg, rgb(0,153,0), rgb(0,153,0) 50%, rgb(204,204,0) 50%, rgb(204,204,0));
+	background-blend-mode: multiply;
+	border-top:5px solid rgb(0,153,0);
+	border-left:5px solid rgb(0,153,0);
+	border-bottom:5px solid rgb(204,204,0);
+	border-right:5px solid rgb(204,204,0);
+	animation:cssload-roto 1.15s infinite linear;
+		-o-animation:cssload-roto 1.15s infinite linear;
+		-ms-animation:cssload-roto 1.15s infinite linear;
+		-webkit-animation:cssload-roto 1.15s infinite linear;
+		-moz-animation:cssload-roto 1.15s infinite linear;
+}
+
+
+@keyframes cssload-roto {
+	0%{transform:rotateZ(0deg);}
+	100%{transform:rotateZ(360deg);}
+}
+
+@-o-keyframes cssload-roto {
+	0%{-o-transform:rotateZ(0deg);}
+	100%{-o-transform:rotateZ(360deg);}
+}
+
+@-ms-keyframes cssload-roto {
+	0%{-ms-transform:rotateZ(0deg);}
+	100%{-ms-transform:rotateZ(360deg);}
+}
+
+@-webkit-keyframes cssload-roto {
+	0%{-webkit-transform:rotateZ(0deg);}
+	100%{-webkit-transform:rotateZ(360deg);}
+}
+
+@-moz-keyframes cssload-roto {
+	0%{-moz-transform:rotateZ(0deg);}
+	100%{-moz-transform:rotateZ(360deg);}
+}
+
+.btn-page{
+    padding: 6px 8px;
+    border-radius: 16px;
+    margin-top: 200px;
+}
+
+#order .btn-small{
+    margin-top:5px;
+}
+.help-block{
+    color: red;
+}
+.parkclub-newm fieldset label .left_input{
+    margin-left: 5%;
+}
+.tooltip > .tooltip-inner {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+ 
+
+.checkbox label:after, 
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+.radio .cr {
+    border-radius: 50%;
+}
+
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr,
+.radio label input[type="radio"]:disabled + .cr {
+    opacity: .5;
+}
+  .menu-product {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .row .col-xs-3{
+      width:24%;
+      padding-right: 2px;
+      padding-left: 2px;
+      padding-top: 2px;
+  }
+.select2-container--krajee .select2-selection--multiple .select2-search--inline .select2-search__field{
+      margin-left: 0;
+      margin-bottom:0;
+      padding-left:0;
+}
+.parkclub-newm fieldset .bootstrap-timepicker input{
+    margin-left: 0;
+}
+.input-group-addon.picker .glyphicon{
+    color: #FFFFFF;
+}
+.fc-timeline .fc-divider{
+    background: #eeeeee;
+    border-color: #cccccc;
+}
+#modal-select .modal-dialog.modal-lg .modal-body{
+    width: 100%;
+}
+.class-session-form .form-group{
+    margin-right: 20px;
+}
+.class-session-form form{
+    margin-top: 30px;
+}
+#modal-select .modal-dialog.modal-lg .modal-content{
+    min-height:200px;
+}
+
+.media .media-object { max-width: 120px; }
+.media-body { position: relative; }
+.media-date { 
+    position: absolute; 
+    right: 25px;
+    top: 25px;
+}
+
+.media-comment { margin-bottom: 20px; }
+.media-replied { margin: 0 0 20px 50px; }
+.media-replied .media-heading { padding-left: 6px; }
+
+.well-ms{
+            margin-left: 35px;                    
+}
+
+.list-radio label{
+    margin-right: 20px;
+}
+.parkclub-newm-left fieldset input[type="radio"]{
+    display: none;
+}
+.new-block-title{
+    background-color: #eeeeee;
+    padding: 10px;
+    font-size: 18px;
+    color: #32cd8b;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.parkclub-newm-left fieldset .col-md-12, .parkclub-newm-left fieldset .col-md-6{
+    padding-left: 0;
+}
+.parkclub-newm-left fieldset textarea, .parkclub-newm-left fieldset input, .parkclub-newm-left fieldset select{
+    margin-left: 20px;
+}
+.parkclub-newm-left fieldset label{
+    margin-left: 35px;
+}
+.parkclub-newm-left fieldset .parkclub-switch label{
+    margin-left: 0px;
+}
+.parkclub-newm-left fieldset{
+    margin-top:0px;
+}
+.parkclub-newm-left {
+    min-height: 150px;
+}
+.view_picture{
+    margin-bottom: 15px;
+}
+.parkclub-newm-left-title{
+    font-size: 22px;
+    padding: 10px;
+    color: #32cd8b;
+}
+.new-block-content{
+    padding-bottom: 15px;
+    width: 100%
+}
+
+.wrapper1, .wrapper2 { width: 100%; overflow-x: scroll; overflow-y: hidden; }
+.wrapper1 { height: 20px; }
+.wrapper2 {}
+.div1 { height: 20px; }
+.div2 { overflow: none; },
+.site-request-password-reset,.site-reset-password{
+    width: 500px;
+    margin: auto;
+}
