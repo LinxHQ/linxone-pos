@@ -22,7 +22,10 @@ if(isset($_GET['status'])){
 }
 $selected_start_date = (isset($_GET['start_date'])) ? $_GET['start_date'] : $start_date;
 $selected_end_date = (isset($_GET['end_date'])) ? $_GET['end_date'] : $end_date;
-
+$branch = false;
+if(isset($_GET['branch'])){
+    $branch = $_GET['branch'];
+}
 $total_amount = 0;
 $total_qty = 0;
 $invoi = new invoice();
@@ -69,7 +72,7 @@ echo '<table style ="margin-top: 3%;">';
     echo '</td>';  
     
     echo '<td><label class="control-label">'.Yii::t('app','Status').':</label></td>';
-    echo '<td style = "width:200px;">';
+    echo '<td style = "width:150px">';
     echo Select2::widget([
         'name' => 'id1334',
         'data' => $dropdow_invoice_status,
@@ -79,7 +82,21 @@ echo '<table style ="margin-top: 3%;">';
         ],
     ]);
     echo '</td>';
+    echo '<td><label class="control-label">'.Yii::t('app','Branch').':</label></td>';
+    echo '<td style = "width:150px">';
+  
+    $table = new app\modules\pos\models\Branch();
+    $dropdow_table =$table->getDataDropdownBranch(); 
+    echo '<select   class="form-control select-none branch">';
+    echo '<option selected> please select </option>';
+    foreach($dropdow_table as $key=>$model){ 
+            echo '<option value = '.$key.'>'; 
+        echo $model;
+        echo '</option>';
+    }
+    echo '</select>'; 
     
+    echo '</td>';
     echo '<td>';  
     echo '<button style="margin-left:4px; margin-bottom: 10px;background-color: rgb(50, 205, 139);" onclick="search_pos();return false;" class="btn btn-success">'.Yii::t('app', 'Search').'</button>';
     echo '</td>';
@@ -202,11 +219,12 @@ $ListSetup  = new app\models\ListSetup();
      
 echo '<div class="parkclub-footer" style="text-align: center">';
 if(isset($_GET['sesstion'])){
-    echo '<a href='.yii\helpers\Url::toRoute(['/pos/default/pos_report_pdf', 'start_date'=>$selected_start_date, 'end_date'=>$selected_end_date, 'sesstion'=>$_GET['sesstion']]).' ><button class="btn btn-success" style = "background-color: rgb(50, 205, 139);">'.Yii::t('app', 'Print PDF').'</button> </a>';                    
-    echo '<a href='.Yii::$app->urlManager->createUrl('/pos/default/pos_report_excel?start_date='.$selected_start_date.'&end_date='.$selected_end_date.'&sesstion='.$_GET['sesstion']).' ><button class="btn btn-success" style = "background-color: rgb(50, 205, 139);" >'.Yii::t('app', 'Export Excel').'</button> </a>';
+    echo '<a href='.yii\helpers\Url::toRoute(['/pos/default/pos_report_pdf', 'start_date'=>$selected_start_date, 'end_date'=>$selected_end_date, 'sesstion'=>$_GET['sesstion'], 'branch'=>$branch]).' ><button class="btn btn-success" style = "background-color: rgb(50, 205, 139);">'.Yii::t('app', 'Print PDF').'</button> </a>';     
+        echo '<a href='.yii\helpers\Url::toRoute(['/pos/default/pos_report_excel', 'start_date'=>$selected_start_date, 'end_date'=>$selected_end_date, 'sesstion'=>$_GET['sesstion'], 'branch'=>$branch]).' ><button class="btn btn-success" style = "background-color: rgb(50, 205, 139);">'.Yii::t('app', 'Export Excel').'</button> </a>';                    
+
 }else{
-    echo '<a href='.yii\helpers\Url::toRoute(['/pos/default/pos_report_pdf', 'start_date'=>$selected_start_date, 'end_date'=>$selected_end_date, 'status'=>$invoice_status_selected]).' ><button class="btn btn-success" style = "background-color: rgb(50, 205, 139);">'.Yii::t('app', 'Print PDF').'</button> </a>';                    
-    echo '<a href='.yii\helpers\Url::toRoute(['/pos/default/pos_report_excel', 'start_date'=>$selected_start_date, 'end_date'=>$selected_end_date, 'status'=>$invoice_status_selected]).' ><button class="btn btn-success" style = "background-color: rgb(50, 205, 139);" >'.Yii::t('app', 'Export Excel').'</button> </a>'; 
+    echo '<a href='.yii\helpers\Url::toRoute(['/pos/default/pos_report_pdf', 'start_date'=>$selected_start_date, 'end_date'=>$selected_end_date, 'status'=>$invoice_status_selected, 'branch'=>$branch]).' ><button class="btn btn-success" style = "background-color: rgb(50, 205, 139);">'.Yii::t('app', 'Print PDF').'</button> </a>';                    
+    echo '<a href='.yii\helpers\Url::toRoute(['/pos/default/pos_report_excel', 'start_date'=>$selected_start_date, 'end_date'=>$selected_end_date, 'status'=>$invoice_status_selected, 'branch'=>$branch]).' ><button class="btn btn-success" style = "background-color: rgb(50, 205, 139);" >'.Yii::t('app', 'Export Excel').'</button> </a>'; 
 }                  
 echo '</div';
 
@@ -238,8 +256,10 @@ echo '</div';
         var status = $('#invoice_status').val();
         var start_date = $('#start_date').val();
         var end_date = $('#end_date').val();
+        var branch = $('.branch').val();
+        
 //        window.location.href='pos/default/pos_report?start_date='+start_date+'&end_date='+end_date+'&status='+status+'&tab=1';
-         window.location.href =  '<?php echo yii\helpers\Url::toRoute(['/pos/default/pos_report'] )?>' + "&start_date=" +start_date+'&end_date='+end_date+'&status='+status+'&tab=1'  ;
+         window.location.href =  '<?php echo yii\helpers\Url::toRoute(['/pos/default/pos_report'] )?>' + "&start_date=" +start_date+'&end_date='+end_date+'&status='+status+'&tab=1&branch=' +branch  ;
 
     }
     

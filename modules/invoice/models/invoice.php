@@ -57,7 +57,7 @@ class invoice extends \yii\db\ActiveRecord
         return [
             [['invoice_type', 'member_id','use_sale_id'], 'required'],
             [['invoice_date','invoice_vat_date','invoice_vat_amount','invoice_subtotal','invoice_total_last_discount','invoice_total_last_tax','invoice_total_last_paid','invoice_gst_value'], 'safe'],
-            [['invoice_type_id','invoice_currency', 'member_id','created_by','invoice_term', 'invoice_discount', 'invoice_gst','invoice_vat_status','department_id' ], 'integer'],
+            [['invoice_type_id','invoice_currency', 'member_id','created_by','invoice_term', 'invoice_discount', 'invoice_gst','invoice_vat_status','branch_id' ], 'integer'],
             [['invoice_note','invoice_status'], 'string'],
             [['invoice_vat_no'], 'string', 'max' => 50],
             [['invoice_no'], 'string', 'max' => 255],

@@ -331,11 +331,11 @@ label {
     margin-right: 10px;
 }
 .parkclub-subtop-bar,.parkclub-wrapper,.parkclub-new-member-wap{
-    width: calc(100% - 250px);
+    width: calc(100%);
     padding-top: 10px;
 }
 .parkclub-nav{
-    width: calc(100% - 250px);
+    width: calc(100%);
     padding-top: 10px;
 }
 .parkclub-rectangle{
@@ -970,8 +970,11 @@ input[type="radio"],input[type="checkbox"]{
 .wrapper1 { height: 20px; }
 .wrapper2 {}
 .div1 { height: 20px; }
-.div2 { overflow: none; },
+.div2 { overflow: none; }
 .site-request-password-reset,.site-reset-password{
     width: 500px;
     margin: auto;
+}
+.modal,#bs-model-group{
+    overflow-y:auto !important;
 }

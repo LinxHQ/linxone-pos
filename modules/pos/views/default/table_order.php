@@ -432,15 +432,15 @@ $dropdow_category = $category_product->getDataArray();
             }
         });
     }
-    function save_change_department(){
-        var department_name = $('#department_name').val(); 
+    function save_change_branch(){
+        var branch_name = $('#branch_name').val(); 
     
         $.ajax({
             'type':'POST',
-            'url':'<?php echo Yii::$app->urlManager->createUrl('pos/department/change_department') ?>',
-            data:{department_name:department_name },
+            'url':'<?php echo Yii::$app->urlManager->createUrl('pos/branch/change_branch') ?>',
+            data:{branch_name:branch_name },
             success:function(data){  
-                $('#bs-model-change-department').modal('hide');
+                $('#bs-model-change-branch').modal('hide');
 				// $("#w0-container").load(location.href+" #w0-container>*","");
             }
         });

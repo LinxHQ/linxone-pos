@@ -211,7 +211,7 @@ class InvoiceItem extends \yii\db\ActiveRecord
         return $array;
     }
     
-    public function search($params,$array_product_id=false,$start_date=false,$end_date=false,$id=false,$status=false)
+    public function search($params,$array_product_id=false,$start_date=false,$end_date=false,$id=false,$status=false,$branch=false)
     {
         $query = InvoiceItem::find();
 
@@ -248,6 +248,9 @@ class InvoiceItem extends \yii\db\ActiveRecord
 					  ->andFilterWhere(['=', 'invoice.invoice_type', 'pos']);
 			}
 			$query->orderBy('invoice_item.invoice_id ASC');
+        }
+        if($branch){
+            $query->andFilterWhere(['=', 'invoice.branch_id', $branch]);
         }
        
         return $dataProvider;

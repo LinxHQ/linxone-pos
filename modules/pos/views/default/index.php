@@ -20,6 +20,7 @@ $dropdow_category = array(""=>Yii::t('app','All'))+$category_product->getDataArr
     <div class="parkclub-subtop-bar">
         <div class="parkclub-nameplate col-lg-5"><div class="parkclub-iconbg"><a href="<?php echo yii\helpers\Url::toRoute(['/pos/default/index']); ?>" ><img src="<?php echo Yii::$app->urlManager->baseUrl; ?>/image/park_new/pos.png" width="22" alt=""></div> <h3><?php echo Yii::t('app', 'Point of sale') ?></h3></a></div>
         <div class="col-lg-6" style="text-align: right; margin-top: 30px;">
+            <a href="<?php echo Yii::$app->urlManager->createUrl('/pos/branch/index') ?>" class="btn btn-primary"  ><?php echo Yii::t('app', 'Branch') ?> <span class="badge" style="color: #ce1515" id="new_order_count"></span></a>
             <a href="#" class="btn btn-primary" onclick="order(0);return false;"><?php echo Yii::t('app', 'NEW ORDER') ?> <span class="badge" style="color: #ce1515" id="new_order_count"><?php echo $invoice_no_table_count; ?></span></a>
             <a href="#" onclick="listOrder(); return false;" class="btn btn-primary"><?php echo Yii::t('app', 'LIST ORDER') ?></a>
             <a href="<?php echo Yii::$app->urlManager->createUrl('/pos/default/report-sesstion') ?>" class="btn btn-primary"><?php echo Yii::t('app', 'SESSION') ?></a>
@@ -191,26 +192,26 @@ $dropdow_category = array(""=>Yii::t('app','All'))+$category_product->getDataArr
     </div>
 <!-- END MODAL PRINT RECEIPT-->
 <!-- departmetn -->
-    <div id="bs-model-change-department" data-backdrop="static" data-keyboard="false" class="modal fade bs-example-modal-lg popupCheckin" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div id="bs-model-change-branch" data-backdrop="static" data-keyboard="false" class="modal fade bs-example-modal-lg popupCheckin" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
         <div class="modal-dialog modal-lg" role="document" style="width: 50%; margin-top: 200px">
             <div  class="modal-content">
                 <div class="modal-header" style="background-color: #337ab7; color:#fff;">
                     <!--<button class="close" type="button" data-dismiss="modal" aria-hidden="true">×</button>-->
                     <div class="fa fa-2x fa-calendar-plus-o" style="float:left;margin-right:10px"></div>
                     <div>
-                        <h4 class="modal-title"><?php echo YII::t('app', "Change department") ?></h4>
+                        <h4 class="modal-title"><?php echo YII::t('app', "Change branch") ?></h4>
                     </div>
                </div>
                 <div class="modal-body" id="modal-content-group" style="padding: 30px;">
                     <div hidden="">
                         <?php echo yii\bootstrap\Html::input('text', 'pop_invoice_id', 0, ['id'=>'pop_invoice_id']) ?>
                     </div>
-                    <div><?php echo Yii::t('app', 'Choose new department'); ?></div>
+                    <div><?php echo Yii::t('app', 'Choose new branch'); ?></div>
                     <div>
                         <?php
-                           $table = new app\modules\pos\models\Department();
-                            $dropdow_table =$table->getDataDropdownDepartment(); 
-                            echo '<select id = "department_name">';
+                           $table = new app\modules\pos\models\Branch();
+                            $dropdow_table =$table->getDataDropdownBranch(); 
+                            echo '<select id = "branch_name">';
                             foreach($dropdow_table as $key=>$model){ 
                                     echo '<option value = '.$key.'>'; 
                                 echo $model;
@@ -222,7 +223,7 @@ $dropdow_category = array(""=>Yii::t('app','All'))+$category_product->getDataArr
                     </div>
                     <div style="display: none;" id ="show_info_order">
                     </div>
-                    <button class="btn btn-success" style="margin-top: 14px; margin-left: 140px;" onclick="save_change_department();return false;"><?php echo Yii::t('app', 'Create');?></button>
+                    <button class="btn btn-success" style="margin-top: 14px; margin-left: 140px;" onclick="save_change_branch();return false;"><?php echo Yii::t('app', 'Create');?></button>
                 </div>
             </div>
         </div>
@@ -255,13 +256,13 @@ $dropdow_category = array(""=>Yii::t('app','All'))+$category_product->getDataArr
     });
 
     function order(table_id,invoice_id){
-        mydepartment = '<?php echo $mydepartment;?>';
+        mybranch = '<?php echo $mybranch;?>';
          
         $('#bs-model-group .modal-content').css({'min-height':'670px'});
         $('#modal-content-group').load('<?php echo Yii::$app->urlManager->createUrl('pos/default/table-oder'); ?>',{table_id:table_id},
             function(data){
-                if(mydepartment =='' && invoice_id ==0 )
-                    $('#bs-model-change-department').modal('show');
+                if(mybranch =='' && invoice_id ==0 )
+                    $('#bs-model-change-branch').modal('show');
                 $('#bs-model-group').modal('show');
                 var table_name = $('#table_'+table_id+' h3').html();
                 if(table_name==undefined)

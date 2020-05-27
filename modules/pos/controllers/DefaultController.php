@@ -83,12 +83,12 @@ class DefaultController extends Controller
             $category_arr[$i]['content'] = $this->renderAjax('_index_table',['dataProvider'=>$dataProvider]);
             $i++;
         }  
-        if(isset($_COOKIE['mydepartment'])) $mydepartment = $_COOKIE['mydepartment'];
-        else $mydepartment = ''; 
+        if(isset($_COOKIE['mybranch'])) $mybranch = $_COOKIE['mybranch'];
+        else $mybranch = ''; 
         return $this->render('index', [
             'category_arr' => $category_arr,
             'invoice_no_table_count'=>$invoice_no_table_count,
-                'mydepartment' => $mydepartment
+                'mybranch' => $mybranch
         ]);
     }
     
@@ -132,6 +132,7 @@ class DefaultController extends Controller
             $sesstion->sesstion_end_date = date('Y-m-d H:i:s');
             $sesstion->save();
         }
+        setcookie("mybranch", '',  time() - (86400 * 15));
     }
 
     public function actionStartSesstion(){
@@ -243,8 +244,8 @@ class DefaultController extends Controller
             $invoice->invoice_status = \app\modules\invoice\models\invoice::INVOICE_STATUS_PAID;
         else
             $invoice->invoice_status = \app\modules\invoice\models\invoice::INVOICE_STATUS_OUSTANDING;
-        if(isset($_COOKIE['mydepartment'])) {
-            $invoice->department_id =  $_COOKIE['mydepartment'];
+        if(isset($_COOKIE['mybranch'])) {
+            $invoice->branch_id =  $_COOKIE['mybranch'];
         }
         
         if($invoice->save()){ 
@@ -710,11 +711,16 @@ class DefaultController extends Controller
             $view_end_date = $_GET['end_date'];
         }
         
+        
         $start_date = $this->format_date_str($start_date,"Y-m-d");
         $end_date = $this->format_date_str($end_date,"Y-m-d");
         
         if(isset($_GET['status'])){
             $status = $_GET['status'];
+        }
+        $branch = false;
+          if(isset($_GET['branch'])){
+            $branch = $_GET['branch'];
         }
         // $product_category = new \app\modules\pos\models\CategoryProduct();
         // $category = $product_category->tableCategoryProduct($parrent = 0,$space="",$start_date,$end_date);
@@ -722,7 +728,7 @@ class DefaultController extends Controller
 		$category = new CategoryProduct();
 		$category = $category->getPosCategoryReport($start_date,$end_date);
 		
-		$dataProvider = $searchModel->search(Yii::$app->request->queryParams,false,$start_date,$end_date,false,$status);
+		$dataProvider = $searchModel->search(Yii::$app->request->queryParams,false,$start_date,$end_date,false,$status,$branch);
         
         $start_date = $this->format_date_str($start_date,"d/m/Y");
         $end_date = $this->format_date_str($end_date,"d/m/Y");
@@ -825,7 +831,11 @@ class DefaultController extends Controller
         if(isset($_GET['status'])){
             $status = $_GET['status'];
         }
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams,false,$start_date,$end_date,false,$status);
+         $branch = false;
+          if(isset($_GET['branch'])){
+            $branch = $_GET['branch'];
+        }
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams,false,$start_date,$end_date,false,$status,$branch);
         $dataProvider->pagination->pageSize=0;
         $content = $this->renderPartial('pos_report_pdf',
                 ['dataProvider'=>$dataProvider,'view_start_date'=>$view_start_date,'view_end_date'=>$view_end_date]
@@ -862,7 +872,11 @@ class DefaultController extends Controller
         if(isset($_GET['status'])){
             $status = $_GET['status'];
         }
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams,false,$start_date,$end_date,false,$status);
+         $branch = false;
+          if(isset($_GET['branch'])){
+            $branch = $_GET['branch'];
+        }
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams,false,$start_date,$end_date,false,$status,$branch);
         
         $dataProvider->pagination->pageSize=0;
         $dataProvider=  $dataProvider->models;

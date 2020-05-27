@@ -1,6 +1,7 @@
 <?php
- 
+
 namespace app\modules\pos\models;
+
 use Yii;
 
 /**
