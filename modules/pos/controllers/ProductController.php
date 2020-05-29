@@ -19,37 +19,12 @@ class ProductController extends Controller
      */
     public function behaviors()
     {
-        //Check permission 
-        $m = 'pos';
-        $DefinePermission = new \app\modules\permission\models\DefinePermission();
-        $canManagerTable = $DefinePermission->checkFunction($m, 'Manager table');
-        $canManagerMenu = $DefinePermission->checkFunction($m, 'Manager menu');
-        if(!$canManagerMenu){
-            throw new NotFoundHttpException(Yii::t('app',"You don't have permission with this action."));
-            exit();
-        } 
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
                 ],
-            ],
-            'access' => [
-                'class' => \yii\filters\AccessControl::className(),
-                'rules' => [
-                    [
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                    // everything else is denied
-                    [
-                        'actions' => [''],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                ],
-
             ],
         ];
     }
@@ -123,6 +98,7 @@ class ProductController extends Controller
      */
     public function actionUpdate($id)
     {
+         
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {

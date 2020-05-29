@@ -4,11 +4,15 @@ use yii\widgets\ActiveForm;
 
 //Check permission 
 $m = 'pos';
-$DefinePermission = new \app\modules\permission\models\DefinePermission();
-$canManagerTable = $DefinePermission->checkFunction($m, 'Manager table');
-$canManagerMenu = $DefinePermission->checkFunction($m, 'Manager menu');
-$canManagerDeposit = $DefinePermission->checkFunction($m, 'Manager deposit');
-$canManageSessions = $DefinePermission->checkFunction($m, 'Manage session');
+//$DefinePermission = new \app\modules\permission\models\DefinePermission();
+//$canManagerTable = $DefinePermission->checkFunction($m, 'Manager table');
+//$canManagerMenu = $DefinePermission->checkFunction($m, 'Manager menu');
+//$canManagerDeposit = $DefinePermission->checkFunction($m, 'Manager deposit');
+//$canManageSessions = $DefinePermission->checkFunction($m, 'Manage session');
+$canManagerTable=true;
+$canManagerDeposit=true; 
+$canManagerMenu=true;
+$canManageSessions=true;
 $this->title = Yii::t('app', 'Setting');
 ?>
 <div id="members-index" class="parkclub-wrapper parkclub-wrapper-search ">
@@ -16,7 +20,7 @@ $this->title = Yii::t('app', 'Setting');
        <div class="parkclub-invoice">
             <div class="parkclub-newm-left-title">
                 <div class="parkclub-header-left">
-                    <a href="<?php echo Yii::$app->urlManager->createUrl('/configuration'); ?>"><i class="glyphicon glyphicon-circle-arrow-left"></i></a>
+                    <a href="<?php echo Yii::$app->urlManager->createUrl('/pos'); ?>"><i class="glyphicon glyphicon-circle-arrow-left"></i></a>
                     <?php echo $this->title; ?>
                 </div>
             </div>

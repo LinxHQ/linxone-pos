@@ -83,6 +83,7 @@ class DefaultController extends Controller
             $category_arr[$i]['content'] = $this->renderAjax('_index_table',['dataProvider'=>$dataProvider]);
             $i++;
         }  
+         
         if(isset($_COOKIE['mybranch'])) $mybranch = $_COOKIE['mybranch'];
         else $mybranch = ''; 
         return $this->render('index', [

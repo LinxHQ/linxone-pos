@@ -4,6 +4,7 @@ use kartik\select2\Select2;
 
 $category_product = new \app\modules\pos\models\CategoryProduct();
 $dropdow_category = $category_product->getDataArray();
+var_dump($dropdow_category);
 ?>
 
 <div>

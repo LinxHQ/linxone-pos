@@ -20,7 +20,8 @@ $dropdow_category = array(""=>Yii::t('app','All'))+$category_product->getDataArr
     <div class="parkclub-subtop-bar">
         <div class="parkclub-nameplate col-lg-5"><div class="parkclub-iconbg"><a href="<?php echo yii\helpers\Url::toRoute(['/pos/default/index']); ?>" ><img src="<?php echo Yii::$app->urlManager->baseUrl; ?>/image/park_new/pos.png" width="22" alt=""></div> <h3><?php echo Yii::t('app', 'Point of sale') ?></h3></a></div>
         <div class="col-lg-6" style="text-align: right; margin-top: 30px;">
-            <a href="<?php echo Yii::$app->urlManager->createUrl('/pos/branch/index') ?>" class="btn btn-primary"  ><?php echo Yii::t('app', 'Branch') ?> <span class="badge" style="color: #ce1515" id="new_order_count"></span></a>
+            <a href="<?php echo Yii::$app->urlManager->createUrl('/pos/default/setting') ?>" class="btn btn-primary"  ><?php echo Yii::t('app', 'Setting') ?> </a>
+            <a href="<?php echo Yii::$app->urlManager->createUrl('/pos/branch/index') ?>" class="btn btn-primary"  ><?php echo Yii::t('app', 'Branch') ?> </a>
             <a href="#" class="btn btn-primary" onclick="order(0);return false;"><?php echo Yii::t('app', 'NEW ORDER') ?> <span class="badge" style="color: #ce1515" id="new_order_count"><?php echo $invoice_no_table_count; ?></span></a>
             <a href="#" onclick="listOrder(); return false;" class="btn btn-primary"><?php echo Yii::t('app', 'LIST ORDER') ?></a>
             <a href="<?php echo Yii::$app->urlManager->createUrl('/pos/default/report-sesstion') ?>" class="btn btn-primary"><?php echo Yii::t('app', 'SESSION') ?></a>

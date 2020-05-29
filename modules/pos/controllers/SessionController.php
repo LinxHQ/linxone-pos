@@ -12,12 +12,12 @@ class SessionController extends \yii\web\Controller
     {
         //Check permission
         $m = 'pos';
-        $DefinePermission = new \app\modules\permission\models\DefinePermission();
-        $canDo = $DefinePermission->checkFunction($m, 'Manage session');
-        if(!$canDo){
-            echo "You don't have permission with this action.";
-            return ;
-        }
+//        $DefinePermission = new \app\modules\permission\models\DefinePermission();
+//        $canDo = $DefinePermission->checkFunction($m, 'Manage session');
+//        if(!$canDo){
+//            echo "You don't have permission with this action.";
+//            return ;
+//        }
         //End check permission
 		$searchModel = new \app\modules\pos\models\SessionSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -31,12 +31,12 @@ class SessionController extends \yii\web\Controller
 	public function actionView($id){
 		//Check permission
         $m = 'pos';
-        $DefinePermission = new \app\modules\permission\models\DefinePermission();
-        $canDo = $DefinePermission->checkFunction($m, 'Manage session');
-        if(!$canDo){
-            echo "You don't have permission with this action.";
-            return ;
-        }
+//        $DefinePermission = new \app\modules\permission\models\DefinePermission();
+//        $canDo = $DefinePermission->checkFunction($m, 'Manage session');
+//        if(!$canDo){
+//            echo "You don't have permission with this action.";
+//            return ;
+//        }
         //End check permission
 		$sesstionorder = new SesstionOrder();
         $status_outstanding = "Outstanding";
