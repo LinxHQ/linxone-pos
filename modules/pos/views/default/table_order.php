@@ -3,8 +3,7 @@ use kartik\select2\Select2;
 
 
 $category_product = new \app\modules\pos\models\CategoryProduct();
-$dropdow_category = $category_product->getDataArray();
-var_dump($dropdow_category);
+$dropdow_category = $category_product->getDataArray(); 
 ?>
 
 <div>
@@ -287,8 +286,9 @@ var_dump($dropdow_category);
             submitOrder(type,id_product);
     }
     
-    function submitOrder(type,product_id){
+    function submitOrder(type,product_id){ 
         var data = $('#order .tab-pane.active #form_order').serialize();
+        console.log(data);
         var invoice = $('#order .tab-pane.active #form_order #invoice_id').val();
         if(type!='update_total')
             $.blockUI();
